@@ -58,7 +58,7 @@
         </ContentControl>
 
         <TextBlock Text="AI CONTROLLER V0.0" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}" FontSize="24"/>
-        <Image Source= "\Images\ShellImages\gamepad.png" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <Image Source= "..\..\Images\ShellImages\gamepad.png" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
 
         <Button x:Name="StartButton" Content="Start Device" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Margin="30" />
         <Button x:Name="StopButton" Content="Stop Device" Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" Margin="30" />

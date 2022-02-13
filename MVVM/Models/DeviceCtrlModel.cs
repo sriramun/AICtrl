@@ -74,7 +74,6 @@ namespace AICtrl.MVVM.Models
 
         ~DeviceCtrlModel()
         {
-            StopDevice();
             client.Dispose();
             Console.WriteLine("device destructor called!");
         }

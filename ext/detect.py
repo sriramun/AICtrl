@@ -36,38 +36,8 @@ with mp_hands.Hands(
             mp_drawing_styles.get_default_hand_landmarks_style(),
             mp_drawing_styles.get_default_hand_connections_style())
 
-        # print('hand_landmarks:', hand_landmarks)
-        # print(
-        #     f'Thumb finger tip coordinates: (',
-        #     f'{ int (hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].x * 1000) }, '
-        #     f'{ int (hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].y * 1000) }, '
-        #     f'{ int (hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].z * 1000) })'
-        # )
-
-        # vals = [
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].x * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].y * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].z * 100).to_bytes(4, 'big', signed=True),
-
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].x * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].y * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP].z * 100).to_bytes(4, 'big', signed=True),
-
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_MCP].x * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_MCP].y * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_MCP].z * 100).to_bytes(4, 'big', signed=True),
-
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_MCP].x * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_MCP].y * 100).to_bytes(4, 'big', signed=True),
-        #     int (hand_landmarks.landmark[mp_hands.HandLandmark.PINKY_MCP].z * 100).to_bytes(4, 'big', signed=True)
-        # ]
-        # 0, 4, 5, 17
-
-        # print(vals);
-
-        # f.write(bytearray(vals))
-
         try:
+            # change to relative
             f = open("C:\\Users\\srira\\source\\repos\\AICtrl\\ext\\data.bin", "wb")
 
             f.write(int (hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].x * 100).to_bytes(4, 'little', signed=True))
@@ -88,7 +58,9 @@ with mp_hands.Hands(
             
             f.close()
         except:
-
+            
+            # fix sys interrupt bug
+            print("insufficient permissions!")
             pass
 
     # Flip the image horizontally for a selfie-view display.

@@ -27,6 +27,8 @@ namespace AICtrl.MVVM.Models
         public void RunDetection()
         {
             var psi = new ProcessStartInfo();
+
+            // change to relative
             psi.FileName = @"C:\Users\srira\AppData\Local\Microsoft\WindowsApps\python3.exe";
 
             var script = @"..\..\ext\detect.py";
