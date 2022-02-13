@@ -107,7 +107,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="ext\data.bin" />
     <Resource Include="ext\detect.py" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

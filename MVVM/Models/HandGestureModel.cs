@@ -24,19 +24,53 @@ namespace AICtrl.MVVM.Models
             this.deviceCtrl = deviceCtrl;
         }
 
+        public string GetPythonExePath()
+        {
+
+            var psi = new ProcessStartInfo();
+
+            psi.FileName = @"cmd.exe";
+
+            var arg = @"/C where python3";
+
+            psi.Arguments = $"\"{arg}\"";
+
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            var errors = "";
+            var results = "";
+
+            Console.WriteLine("here");
+
+            using (var process = Process.Start(psi))
+            {
+                errors = process.StandardError.ReadToEnd();
+                results = process.StandardOutput.ReadToEnd();
+
+            }
+
+            return results;
+        }
+
         public void RunDetection()
         {
             var psi = new ProcessStartInfo();
 
             // change to relative
-            psi.FileName = @"C:\Users\srira\AppData\Local\Microsoft\WindowsApps\python3.exe";
+            //psi.FileName = @"C:\Users\srira\AppData\Local\Microsoft\WindowsApps\python3.exe";
 
-            var script = @"..\..\ext\detect.py";
+            psi.FileName = GetPythonExePath();
+
+            var script = @"detect.py";
 
             psi.Arguments = $"\"{script}\"";
 
             psi.UseShellExecute = false;
             psi.CreateNoWindow = true;
+            psi.WorkingDirectory = @"../../ext/";
             psi.RedirectStandardOutput = true;
             psi.RedirectStandardError = true;
 
@@ -48,7 +82,6 @@ namespace AICtrl.MVVM.Models
                 errors = process.StandardError.ReadToEnd();
                 results = process.StandardOutput.ReadToEnd();
 
-                Console.WriteLine(results);
             }
 
 
@@ -58,6 +91,8 @@ namespace AICtrl.MVVM.Models
             Console.WriteLine("Results:");
             Console.WriteLine(results);
         }
+
+
 
         public bool GetDetectionData()
         {

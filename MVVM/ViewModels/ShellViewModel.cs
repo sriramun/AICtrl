@@ -34,6 +34,9 @@ namespace AICtrl.MVVM.ViewModels
 
         public void TestButton()
         {
+
+            Console.WriteLine(handGesture.GetPythonExePath());
+
             Task task1 = new Task(() => handGesture.RunDetection());
             Task task2 = new Task(() => handGesture.GetDetectionData());
 

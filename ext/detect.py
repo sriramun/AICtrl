@@ -38,7 +38,9 @@ with mp_hands.Hands(
 
         try:
             # change to relative
-            f = open("C:\\Users\\srira\\source\\repos\\AICtrl\\ext\\data.bin", "wb")
+            # f = open("C:\\Users\\srira\\source\\repos\\AICtrl\\ext\\data.bin", "wb")
+
+            f = open("data.bin", "wb")
 
             f.write(int (hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].x * 100).to_bytes(4, 'little', signed=True))
             f.write( int (hand_landmarks.landmark[mp_hands.HandLandmark.WRIST].y * 100).to_bytes(4, 'little', signed=True))
