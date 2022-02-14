@@ -19,5 +19,5 @@ This alternative solution also caters to those gamers who may not be able to phy
   * [OpenCV](https://pypi.org/project/opencv-python/)
 * [ViGEm](https://github.com/ViGEm/ViGEmBus/releases)
 
-Fork, Clone, or download the source code, and build using Visual Studio 2019.
+Fork, Clone or download the source code, and build using Visual Studio 2019.
 
