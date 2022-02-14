@@ -12,7 +12,7 @@ This alternative solution also caters to those gamers who may not be able to phy
 
 ## Installation 
 
-### Prerequisite installations
+### Prerequisites
 * [.NET FrameWork 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
 * [python3](https://www.python.org/downloads/)
   * [MediaPipe](https://pypi.org/project/mediapipe/)
