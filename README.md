@@ -15,7 +15,7 @@ This alternative solution also caters to those gamers who may not be able to phy
 ### Prerequisite installations
 * .NET FrameWork 4.8
 * [python3](https://www.python.org/downloads/)
-  * [MediaPipe](https://google.github.io/mediapipe/getting_started/python)
+  * [MediaPipe](https://pypi.org/project/mediapipe/)
   * [OpenCV](https://pypi.org/project/opencv-python/)
 * [ViGEm](https://github.com/ViGEm/ViGEmBus/releases)
 
