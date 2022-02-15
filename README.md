@@ -9,7 +9,7 @@ This alternative solution also caters to those gamers who may not be able to phy
 
 ## Scope 
 * Once there's support for more virtual HIDs, the set of use cases will be greatly diversified. For example, users can map sign language to human readable text (gestures mapped to sequences of keystrokes), or use their eyes to control a mouse cursor.
-* Hand articulation combined with various holistic postures and gestures can give rise to countless unique combinations, each capable of being mapped to a control. The project can aim to make a greater set of such combinations available to the end user, greatly increasing customizability. 
+* Hand articulation combined with various holistic postures and gestures can give rise to countless unique combinations, each capable of being mapped to a control. The project can aim to make a greater set of such combinations available to the end user — greatly increasing customizability. 
 
 ## Demo
 [![Demo](https://img.youtube.com/vi/i96oSmNV2Bk/0.jpg)](https://youtu.be/i96oSmNV2Bk)
